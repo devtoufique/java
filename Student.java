@@ -4,6 +4,12 @@ class Student {
     int id;
     double cgpa;
 
+    Student(String name, int id, double cgpa) {
+        this.name = name;
+        this.id = id;
+        this.cgpa = cgpa;
+    }
+
     void showDetails() {
         System.out.println("Student Name: " + name);
         System.out.println("Student ID: " + id);
@@ -11,12 +17,7 @@ class Student {
     }
 
     public static void main(String[] args) {
-        Student s1 = new Student();
-
-        s1.name = "Rahul";
-        s1.id = 101;
-        s1.cgpa = 4.00;
-
+        Student s1 = new Student("Jim", 101, 4.00);
         s1.showDetails();
     }
 }
