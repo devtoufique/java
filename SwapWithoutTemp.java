@@ -8,7 +8,6 @@ public class SwapWithoutTemp {
         System.out.print("Enter second number (b): ");
         int b = sc.nextInt();
 
-        // Swapping without a temporary variable
         a = a + b;
         b = a - b;
         a = a - b;

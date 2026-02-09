@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Goldbach {
-    // Helper method to check if a number is prime
     static boolean isPrime(int n) {
         if (n <= 1)
             return false;
