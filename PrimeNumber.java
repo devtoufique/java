@@ -23,5 +23,6 @@ public class PrimeNumber {
         String result = isPrime ? "is a Prime number" : "is not a Prime number";
         System.out.println(num + " " + result);
 
+        sc.close();
     }
 }
