@@ -1,37 +1,24 @@
+import java.util.Scanner;
+
 public class PascalsTriangle {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of rows: ");
+        int rows = sc.nextInt();
 
-    public static void printCenteredPascalsTriangle(int n) {
-
-        int[][] triangle = new int[n][n];
-
-        for (int i = 0; i < n; i++) {
-            triangle[i][0] = 1;
-            triangle[i][i] = 1;
-
-            for (int j = 1; j < i; j++) {
-                triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j];
-            }
-        }
-
-        for (int i = 0; i < n; i++) {
-            for (int space = 0; space < n - i - 1; space++) {
-                System.out.print("  ");
+        for (int i = 0; i < rows; i++) {
+            for (int s = 0; s < rows - i; s++) {
+                System.out.print(" ");
             }
 
+            int number = 1;
             for (int j = 0; j <= i; j++) {
-                System.out.print(triangle[i][j] + "   ");
+                System.out.print(number + " ");
+                number = number * (i - j) / (j + 1);
             }
-
+            
             System.out.println();
         }
-    }
-
-    public static void main(String[] args) {
-        java.util.Scanner scanner = new java.util.Scanner(System.in);
-        System.out.print("Enter the number of rows: ");
-        int rows = scanner.nextInt();
-        scanner.close();
-
-        printCenteredPascalsTriangle(rows);
+        sc.close();
     }
 }
